@@ -120,8 +120,6 @@ VALUES ('LOGS1', 3, 4, 100.0, '2022-02-22', '2022-07-22', 1);
 INSERT INTO Matricula (Disciplina, Aluno, Status_Aprovacao, Frequencia, Data_Inicio, Data_Previsao_Fim, Semestre_Atual)
 VALUES ('LPES1', 3, 4, 66.7, '2022-02-22', '2022-07-22', 1);
 
-DELETE FROM Matricula;
-
 -- ------------------------------------TESTE REPROVADO POR FALTA------------------------------------------
 EXEC AtualizaNota @Disciplina = 'FMTS1', @Aluno = 1, @Nota = 1, @Valor_Nota = 6, @Frequencia = 66.7; --6
 EXEC AtualizaNota @Disciplina = 'HTCS1', @Aluno = 1, @Nota = 1, @Valor_Nota = 5, @Frequencia = 33.3; --3
@@ -162,7 +160,6 @@ EXEC AtualizaNota @Disciplina = 'LITS1', @Aluno = 3, @Nota = 2, @Valor_Nota = 10
 EXEC AtualizaNota @Disciplina = 'LOGS1', @Aluno = 3, @Nota = 2, @Valor_Nota = 10, @Frequencia = 100.0; --100
 EXEC AtualizaNota @Disciplina = 'LPES1', @Aluno = 3, @Nota = 2, @Valor_Nota = 10, @Frequencia = 54.7; --6
 
-SELECT * FROM Matricula;
 
 -- SELECIONA Dados do Aluno em Disciplina e Ano especifico
 EXEC Consulta_MatriculasDisciplinaAno @Disciplina = 'HTCS1', @Ano = 2022;
