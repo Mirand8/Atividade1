@@ -162,6 +162,8 @@ EXEC AtualizaNota @Disciplina = 'LITS1', @Aluno = 3, @Nota = 2, @Valor_Nota = 10
 EXEC AtualizaNota @Disciplina = 'LOGS1', @Aluno = 3, @Nota = 2, @Valor_Nota = 10, @Frequencia = 100.0; --100
 EXEC AtualizaNota @Disciplina = 'LPES1', @Aluno = 3, @Nota = 2, @Valor_Nota = 10, @Frequencia = 54.7; --6
 
+SELECT * FROM Matricula;
+
 -- SELECIONA Dados do Aluno em Disciplina e Ano especifico
 EXEC Consulta_MatriculasDisciplinaAno @Disciplina = 'LPES1', @Ano = 2022;
 

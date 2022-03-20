@@ -1,12 +1,12 @@
-create TRIGGER TrigAtualizaStatus ON Matricula
+ALTER TRIGGER TrigAtualizaStatus ON Matricula
 AFTER UPDATE
 AS
     DECLARE 
-        @Aluno INT,
-        @Disciplina VARCHAR(6),
-        @Media_Aluno DECIMAL(10, 2),
-        @Frequencia_Aluno DECIMAL(10, 2),
-        @CargaHoraria_Disciplina DECIMAL(10, 2)
+        @Aluno                      INT,
+        @Disciplina                 VARCHAR(6),
+        @Media_Aluno                DECIMAL(10, 2),
+        @Frequencia_Aluno           DECIMAL(10, 2),
+        @CargaHoraria_Disciplina    DECIMAL(10, 2)
 
         SELECT @Aluno = Aluno, @Disciplina = Disciplina, @Frequencia_Aluno = Frequencia, @Media_Aluno = Nota_Media FROM INSERTED
         SELECT @CargaHoraria_Disciplina = Carga_Horaria FROM Disciplina WHERE Codigo = @Disciplina;
